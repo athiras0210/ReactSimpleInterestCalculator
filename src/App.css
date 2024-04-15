@@ -1,38 +1,67 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .App {
-  text-align: center;
+  background-color: #fac7c1;
+  min-height: 100vh; /* Ensure the container takes up at least the full height of the viewport */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#maindiv {
+  background-color: #ffa07a;
+  width: 90%; /* Use relative width for better responsiveness */
+  max-width: 600px; /* Set a maximum width to avoid content stretching too wide */
+  height: auto; /* Allow the height to adjust based on content */
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: 20px; /* Add padding for better spacing */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h3 {
+  color: rgb(149, 5, 5);
+  text-decoration: underline;
+  font-weight: bolder;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+p {
+  color: rgb(237, 227, 227);
+  text-shadow: 2px 4px 5px black;
+  font-weight: bolder;
+  font-size: smaller;
+}
+
+.total {
+  background-color: #f9c1be;
+  padding: 20px;
+  border-radius: 29px;
+  border: 2px ridge #fbc9c4;
+  box-shadow: inset 4px 4px 4px 4px #c28b87;
+  margin-top: 20px; /* Add margin for spacing */
+}
+
+.input {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Media query for screens with a maximum width of 768px */
+@media only screen and (max-width: 768px) {
+  .App {
+    padding: 20px;
   }
-  to {
-    transform: rotate(360deg);
+
+  #maindiv {
+    width: 100%; /* Adjust width to fill the entire viewport */
+    border-radius: 10px; /* Reduce border radius for smaller screens */
+  }
+
+  .total {
+    margin-top: 10px; /* Reduce margin for spacing */
   }
 }
